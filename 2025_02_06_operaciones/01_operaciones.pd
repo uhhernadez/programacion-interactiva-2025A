@@ -1,0 +1,30 @@
+#N canvas 779 36 592 300 10;
+#X obj 96 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 96 85 15 0 0 0 - - -;
+#X obj 96 58 expr (sin(17/7*4)+cos(5) -4);
+#X obj 277 57 moses 20;
+#X obj 479 102 print;
+#X floatatom 278 91 5 0 0 0 - - -;
+#X floatatom 323 91 5 0 0 0 - - -;
+#X floatatom 277 25 5 0 0 0 - - -;
+#X obj 386 57 sel 1 2;
+#X msg 386 17 1;
+#X msg 426 17 2;
+#X obj 384 91 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 408 91 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 433 92 5 0 0 0 - - -;
+#X msg 343 17 12;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 3 1 6 0;
+#X connect 7 0 3 0;
+#X connect 8 0 11 0;
+#X connect 8 1 12 0;
+#X connect 8 2 13 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 14 0 8 0;

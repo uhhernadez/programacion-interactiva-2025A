@@ -1,0 +1,25 @@
+#N canvas 732 127 607 382 10;
+#X obj 96 96 +;
+#X obj 129 117 +;
+#X obj 157 139 +;
+#X floatatom 157 164 5 0 0 0 - - -;
+#X obj 67 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 68 64 2;
+#X msg 122 64 3;
+#X msg 174 65 7;
+#X obj 68 36 trigger bang bang bang bang;
+#X msg 227 65 9;
+#X obj 16 110 t b b b b;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 8 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 1;
+#X connect 7 0 1 1;
+#X connect 8 0 5 0;
+#X connect 8 1 6 0;
+#X connect 8 2 7 0;
+#X connect 8 3 9 0;
+#X connect 9 0 2 1;
