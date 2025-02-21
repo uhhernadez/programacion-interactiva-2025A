@@ -1,0 +1,10 @@
+#N canvas 524 58 918 489 10;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array quack 74880 float 2;
+#X coords 0 1 74880 -1 200 140 1;
+#X restore 237 13 graph;
+#X obj 9 26 soundfiler;
+#X floatatom 9 51 5 0 0 0 - - -;
+#X msg 8 5 read -resize ./quack.wav quack;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;

@@ -1,0 +1,26 @@
+#N canvas 284 25 918 489 10;
+#X obj 46 55 osc~;
+#X text 97 46 Modulador de baja frecuencia;
+#X obj 47 2 hsl 128 15 0 5 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8750 1;
+#X obj 46 87 +~ 1;
+#X obj 46 111 /~ 2;
+#X floatatom 45 32 5 0 0 0 - - -;
+#X obj 44 222 dac~;
+#X obj 44 165 +~ 500;
+#X obj 45 191 osc~ 400;
+#X obj 112 142 *~ 100;
+#X obj 182 69 vsl 15 128 0 500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12750 1;
+#X obj 283 92 grapher~;
+#X connect 0 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 9 0;
+#X connect 5 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 8 0 6 1;
+#X connect 8 0 11 0;
+#X connect 9 0 7 0;
+#X connect 10 0 9 1;
