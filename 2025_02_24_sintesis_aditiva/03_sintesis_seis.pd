@@ -17,14 +17,14 @@
 #X text 355 378 comment;
 #X obj 68 238 +~;
 #X obj 69 313 /~;
-#X obj 109 275 +;
-#X obj 163 244 t b f;
+#X obj 108 286 +;
+#X obj 162 255 t b f;
 #X floatatom 109 309 5 0 0 0 - - -;
 #X obj 69 350 dac~;
 #X obj 250 151 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 4950 1;
-#X obj 213 272 +;
-#X obj 251 242 t b f;
+#X obj 214 294 +;
+#X obj 244 255 t b f;
 #X obj 207 145 osc~;
 #X obj 207 123 f;
 #X obj 207 103 * 2;
@@ -32,8 +32,8 @@
 #X obj 134 237 +~;
 #X obj 327 151 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 4950 1;
-#X obj 290 272 +;
-#X obj 328 242 t b f;
+#X obj 292 295 +;
+#X obj 320 255 t b f;
 #X obj 284 145 osc~;
 #X obj 284 123 f;
 #X obj 284 103 * 2;
@@ -41,8 +41,8 @@
 #X obj 211 238 +~;
 #X obj 399 151 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 4950 1;
-#X obj 362 273 +;
-#X obj 400 243 t b f;
+#X obj 363 296 +;
+#X obj 395 257 t b f;
 #X obj 356 146 osc~;
 #X obj 356 124 f;
 #X obj 356 104 * 2;
