@@ -1,0 +1,95 @@
+#N canvas 523 65 833 562 10;
+#X obj 75 131 soundfiler;
+#X msg 75 106 read -resize CumbiaSampuesana.wav song;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array song 1.11941e+07 float 2;
+#X coords 0 1 1.11941e+07 -1 200 140 1;
+#X restore 371 13 graph;
+#X obj 272 213 tabplay~ song;
+#X obj 268 243 dac~;
+#X msg 226 173 stop;
+#X obj 277 173 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 132 158 print;
+#X floatatom 77 201 5 0 0 0 - - -;
+#X obj 77 219 expr 1/$f1;
+#X obj 77 178 expr $f1/44100;
+#X obj 43 264 phasor~;
+#X obj 44 244 *;
+#X obj 26 107 vsl 15 80 0 2 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 22 216 5 0 0 0 - - -;
+#X obj 43 289 *~;
+#X obj 43 312 tabread4~ song;
+#X obj 36 354 dac~;
+#X obj 74 78 loadbang;
+#X obj 48 6 udpreceive 10002;
+#X obj 48 28 unpackOSC;
+#X obj 177 52 routeOSC /volume;
+#X obj 29 52 routeOSC /pitch;
+#X obj 180 248 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 43 334 *~;
+#X obj 131 74 print;
+#X obj 434 262 rfft~;
+#X obj 472 310 *~;
+#X obj 415 309 *~;
+#X obj 440 339 +~;
+#X obj 440 369 sqrt~;
+#X obj 646 421;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array espectro 32 float 3;
+#A 0 0.587598 0.0117442 0.00587798 0.00392631 0.00295294 0.00237084
+0.00198424 0.00170858 0.00150665 0.00134793 0.00122244 0.00112084 0.00103719
+0.000967298 0.000908298 0.000857676 0.000814822 0.000777614 0.000745333
+0.000717291 0.000692983 0.000671738 0.000653187 0.000637429 0.00062369
+0.000611978 0.000602117 0.00059399 0.000587497 0.000582528 0.000578848
+0.000576843;
+#X coords 0 1 32 -1 200 140 1;
+#X restore 530 267 graph;
+#X obj 440 398 /~ 64;
+#X obj 440 422 tabwrite~ espectro;
+#X obj 365 374 metro 200;
+#X obj 365 335 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 430 224 osc~ 10;
+#X connect 0 0 7 0;
+#X connect 0 0 10 0;
+#X connect 0 0 15 1;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
+#X connect 8 0 9 0;
+#X connect 9 0 12 1;
+#X connect 10 0 8 0;
+#X connect 11 0 15 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 12 0;
+#X connect 15 0 16 0;
+#X connect 16 0 24 0;
+#X connect 18 0 1 0;
+#X connect 18 0 13 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 20 0 22 0;
+#X connect 20 0 25 0;
+#X connect 21 0 23 0;
+#X connect 22 0 13 0;
+#X connect 23 0 24 1;
+#X connect 24 0 17 0;
+#X connect 24 0 17 1;
+#X connect 26 0 28 0;
+#X connect 26 0 28 1;
+#X connect 26 1 27 0;
+#X connect 26 1 27 1;
+#X connect 27 0 29 1;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 30 0 33 0;
+#X connect 33 0 34 0;
+#X connect 35 0 34 0;
+#X connect 36 0 35 0;
+#X connect 37 0 26 0;
